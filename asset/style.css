@@ -39,12 +39,16 @@
   justify-content: flex-end;
 }
 
-i{
+.head i{
   color: white;
   padding-left: 10px;
 }
 
 /*main*/
+.container-main{
+  padding-bottom: 30px;
+}
+
 .container{
   flex-wrap: wrap;
   justify-content: center;
@@ -54,34 +58,91 @@ i{
   margin: 50px auto;
 }
 
+/*img switch*/
+.card:hover .img-hover{
+  display: inline-block;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+.img-hover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+/*card*/
+.row{
+  display: flex;
+  gap: 15px;
+  padding-bottom: 20px
+}
+
+.basis{
+  flex-basis: calc(100% / 3);
+}
+
+.card{
+  position: relative;
+}
+
+.discount{
+  position: absolute;
+  bottom: 100px;
+  background-color: red;
+  font-size: 13px;
+  padding: 6px;
+  color: white;
+}
+
+.green{
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+  background-color: green;
+  font-size: 13px;
+  padding: 6px;
+  color: white;
+}
+
+.single-green{
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  background-color: green;
+  font-size: 13px;
+  padding: 6px;
+  color: white;
+}
+
+.brand{
+  font-style: italic;
+  font-weight: 400;
+}
+
+/*box and heart*/
 .box{
-width: 30%;
-flex-direction: column;
-margin: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  position: absolute;
+  top: 7px;
+  right: 0;
 }
 
-.box img{
-  padding-bottom: 7px;
-}
-
-/*name box*/
-#brand{
-  font-size: 0.8rem;
-}
-
-#name{
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-#price{
+.box:hover .heart{
+  display: inline-block;
   color: red;
-  font-weight: bold;
-  font-size: 0.8rem;
 }
 
-#old{
+.discount-price{
+  display: inline-block;
+  color: red;
+}
+.original-price{
+  display: inline-block;
   text-decoration: line-through;
-  font-size: 0.8rem;
 }
